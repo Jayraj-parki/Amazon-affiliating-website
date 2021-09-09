@@ -1,0 +1,42 @@
+@import "./mixin.scss";
+@import "./var.scss";
+.product_container{
+    background-color: $bg-main;
+    border-radius: $radius-small;
+    transform: scale(.95,1);
+    .heading{
+        border-radius: $radius-small;
+        background-color: $bg-dark;
+        transform: $scale;
+        h1{
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }   
+        button{
+            color: black;
+            font-weight: 800;
+           
+            background-color: #ffb03a;
+            background-color: #ffb03a;
+            &:hover{
+                color: white;
+                box-shadow: $shadow-hover;
+                background-color: transparent;
+            }
+        }
+    }
+    
+    .product{
+       overflow-x: scroll;
+        @include Scroll();
+
+    }
+    .arrow{
+        @media screen and (max-width:992px) {
+            display: none;
+        }
+    }
+    
+}

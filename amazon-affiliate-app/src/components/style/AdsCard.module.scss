@@ -1,0 +1,34 @@
+@import "./mixin.scss";
+@import "./var.scss";
+.square{
+    @media screen and (max-width:920px) {
+        transform: scale(0.8);
+    }
+    @media screen and (max-width:767px) {
+       
+        &:nth-child(2){
+            display: none;
+        }
+        &:nth-child(4){
+            display: none;
+        }
+        
+        
+    }
+    @media screen and (max-width:700px) {
+        
+        &:nth-child(1){
+            display: none;
+        }
+        &:nth-child(2){
+            display: none;
+        }
+        &:nth-child(4){
+            display: none;
+        }
+        &:nth-child(5){
+            display: none;
+        }
+        transform: scale(1);
+    }
+}

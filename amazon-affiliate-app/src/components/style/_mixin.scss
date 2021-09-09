@@ -1,0 +1,29 @@
+@mixin Flex($justify:center,$align:center,$dir:column,) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+
+@mixin Scroll() {
+    /* width */
+ &::-webkit-scrollbar {
+    height: .2rem;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 2rem;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}

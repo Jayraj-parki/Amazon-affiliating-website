@@ -1,0 +1,151 @@
+@import "./mixin.scss";
+@import "./var.scss";
+
+nav{
+
+    background-color: $bg-dark;
+    .logo{
+        font-family: 'Lobster', cursive;
+        letter-spacing: .1rem;
+    }
+    div>div{
+        ul{
+            li{
+                .navLink{
+                    &:hover{
+                        border-bottom: .182rem solid rgb(189, 187, 187);
+                    }
+                }
+
+            }
+            .dropdown{
+                position: relative;
+                ul{
+                    position: absolute;
+                    border:.1rem solid rgb(211, 209, 209);
+                    width: 90vw;
+                    background-color: rgba(255, 255, 255,.9);
+                    transform: translate(-18rem);
+                    @include Flex($dir:row);
+                    display: none;
+                    z-index:99;
+                    flex-wrap: wrap;
+                    @media screen and (max-width:992px){
+                        transform: translate(0rem);
+                        
+                    }
+                    li{
+                        list-style-type: none;
+                       
+                        margin: auto;
+                        a{
+                            border-radius: $radius;
+                            background-color: $bg-dark;
+                            color: white;
+                            text-decoration: none;
+                            font-family: $family;
+                            font-size: 1rem;
+                            letter-spacing: .092rem;
+                            transform: $scale;
+                            text-transform: capitalize;
+                            transition: all $transition-fast;
+                            &:hover{
+                                
+                                transform: scaleY(1);
+                                font-weight: 900;
+                                
+                            }
+                        }
+                    }
+                    
+                }
+                .allProduct{
+                    
+                    @media screen and (max-width:576px){
+                        height: 80vh;
+                        overflow: scroll;
+                        
+                    }
+                    .icon_container{
+                        width:min-content
+                    }
+                }
+            }
+            .social_media{
+                .icon_container{
+                    color: rgb(223, 221, 221);
+                    transition: all $transition-fast;
+                    &:hover{
+                        box-shadow: $shadow-hover;
+                        color: white;
+                    }
+                }
+                ul{
+                    
+                    
+                    li{
+                        
+                        .dropdown_item{
+                            border-radius: $radius;
+                            transform: $scale;
+                            background-color: $bg-dark;
+                            color: white;
+                           &:hover{
+                               box-shadow:inset 0rem 0rem .2rem .01rem rgb(160, 159, 159);
+                                color: $black;
+                                background-color: white;
+                               
+                                transform: scale(1);
+                           }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .form{
+            input{
+                box-shadow: 0px 0px .1rem .1rem $bg-light;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                position: relative;
+                &::placeholder{
+                    color: rgb(168, 164, 164);
+                }
+                &:focus{
+                    border: none;
+                    outline: none;
+                   
+                }
+            }
+            datalist{
+                position: absolute;
+                top: 0;
+                display: none;
+                background-color: red;
+                option{
+                    &:hover{
+                        background-color: red;
+                    }
+                }
+            }
+            .showProduct{
+                text-transform: capitalize;
+                color: $bg-dark;
+                font-size: 1rem;
+                background-color: white;
+                transition: all $transition-fast;
+                &:hover{
+                    box-shadow: 0px 0px .1rem .1rem $bg-light;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    color: white;
+                }
+               
+            }
+        }
+    }
+}

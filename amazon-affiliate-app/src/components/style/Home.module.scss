@@ -1,0 +1,96 @@
+@import "./mixin.scss";
+@import "./var.scss";
+.main{
+   background-color: rgb(0, 84, 87);;
+}
+
+.content{
+    .aside{
+        height: min-content;
+        transform: scaleX(0.95);
+        .deals{
+            border: none;
+            outline: none;
+            background-color: none;
+            
+            
+            button{
+                color: black;
+                font-weight: 900;
+                color: white;
+                letter-spacing: .09rem;
+                background-color: #f59506;
+                font-size:1.2rem;
+                &:hover{
+                    background-color: #ff5e00;
+                }
+            }
+        }
+        .product{
+            overflow: hidden;
+            &::-webkit-scrollbar {
+                width: .2rem;
+            }
+            div{
+                h2{
+                    font-size: 1.5rem;
+                    color: white;
+                }
+            }
+            .random{
+                height: 40rem;
+                overflow-x:hidden;
+                overflow-y: scroll;
+                @include Scroll();
+                &::-webkit-scrollbar {
+                    width: .2rem;
+                }
+            }
+        }
+        .ads{
+            // transform: scale(0.92);
+            border: none;
+            outline: none;
+            background-color: $bg-main;
+            // box-shadow: $shadow;
+            overflow: hidden;
+            &:hover{
+                background-color: none;
+            }
+            img{
+            }
+        }
+        .popular{
+            // transform: scaleX(0.92);
+            border: none;
+            outline: none;
+            // background-color: none;
+            // box-shadow: $shadow;
+            overflow: hidden;
+            h2{
+                color: white;
+                font-size: 1.5rem;
+            }
+            
+            button{
+                color:white;
+                .icon{
+                    font-size: 2rem;
+                }
+            }
+            .popular_product{
+                height: 30rem;
+                overflow-x:hidden;
+                overflow-y: scroll;
+                @include Scroll();
+                &::-webkit-scrollbar {
+                    width: .2rem;
+                }
+                
+            }
+        }
+    }
+}
+.footer{
+    background-color: $bg-dark;
+}

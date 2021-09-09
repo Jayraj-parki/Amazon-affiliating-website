@@ -1,0 +1,74 @@
+@import "./mixin.scss";
+@import "./var.scss";
+.product_container{
+    background-color: white;
+    border-radius: $radius-small;
+    box-shadow: $shadow;
+    .heading{
+        border-radius: $radius-small;
+        background-color: $bg-dark;
+        transform: $scale;
+        h1{
+            color: white;
+            font-size: 1.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        button{
+            color: black;
+            font-weight: 800;
+            background-color: #ffb03a;
+            background-color: #ffb03a;
+            &:hover{
+                color: white;
+                box-shadow: $shadow-hover;
+                background-color: transparent;
+            }
+        }
+    }
+    .search{
+
+        input{
+            border: none;
+            outline: none;
+            border-radius: $radius+1.2rem;
+            background-color: $bg-dark;
+            color:white;
+            text-transform: capitalize;
+            &::placeholder{
+                color:#979797 ;
+                font-size: 1rem;
+                // font-weight: 700;
+            }
+            &:focus{
+                box-shadow: 0rem 0rem .2rem .1rem rgba(209, 208, 208, 0.548);
+                
+            }
+        }
+        button{
+            color: black;
+            font-weight: 800;
+            background-color: #ffb03a;
+            letter-spacing: 0.095rem;
+            &:hover{
+                background-color: #ff9900;
+            }
+        }
+
+    }
+    .product{
+       overflow: hidden;
+       @include Scroll();
+       &::-webkit-scrollbar {
+        width: .2rem;
+      }
+
+    }
+    .show{
+        button{
+            font-size: 1rem;
+            // font-weight: 600;
+            
+            text-transform: capitalize;
+        }
+    }
+}

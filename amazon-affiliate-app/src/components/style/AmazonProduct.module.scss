@@ -1,0 +1,14 @@
+@import "./mixin.scss";
+@import "./var.scss";
+.product{
+    height: 250px;
+    box-shadow: 0rem 0rem .2rem .031rem rgb(255, 174, 0);
+    
+    @media screen and (max-width:1199px) {
+        width: 8rem;
+        margin: 0px 1rem;
+    }
+}
+iframe{
+    border: none;
+}
